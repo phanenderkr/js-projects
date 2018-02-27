@@ -10,7 +10,6 @@ class Weather{
         const response = await fetch(`http://api.wunderground.com/api/${this.apiKey}/conditions/q/${this.state}/${this.city}.json`);
 
         const responseData = await response.json();
-        console.log(responseData.current_observation);
 
         return responseData.current_observation;
     }
